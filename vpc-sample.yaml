@@ -1,6 +1,3 @@
-# Builder
-# @shinon_uk
-
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'VPC Template'
 
@@ -31,11 +28,13 @@ Parameters:
     Description: Please specify the Subnet IP for Public1
     Type: String
     Default: '10.0.0.0/20'
+    AllowedPattern: '((\d{1,3})\.){3}\d{1,3}/\d{1,2}'
 
   Private1SubnetCidr: 
     Description: Please specify the Subnet IP for Public1
     Type: String
     Default: '10.0.64.0/20'
+    AllowedPattern: '((\d{1,3})\.){3}\d{1,3}/\d{1,2}'
 
 
 Resources:
